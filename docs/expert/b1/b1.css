@@ -1,0 +1,97 @@
+body {
+    padding-bottom: 200px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+/* ページの見出し */
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+/* クイズの設問全体 */
+div.quiz {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px 60px 30px 60px;
+    border-radius: 20px;
+}
+
+img.question {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/* 第◯問(中見出し) */
+h2 {
+    font-size: 20px;
+}
+
+#playerName {
+    height: 26px;
+    width: 200px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    padding: 2px 10px;
+}
+
+.result {
+    font-weight: 700;
+}
+
+.answer {
+    font-weight: 700;
+}
+
+span.name-area {
+    font-weight: 700;
+    color: blue;
+}
+
+/* 選択肢を囲うエリア */
+.choices {
+    margin-bottom: 20px;
+}
+
+.choices-img {
+    margin-bottom: 20px;
+}
+
+.choices-img img {
+    height: 200px;
+    border: 2px solid #aaa;
+}
+
+.choices-img img.active {
+    border: 2px solid red;
+}
+
+/* 各選択肢の右余白 */
+label {
+    margin-right: 4px;
+}
+
+/* 回答するボタンを囲うエリア */
+.button-area {
+    text-align: center;
+}
+
+/* 回答するボタン */
+.answer-button {
+    background-color: #299fd0;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 4px 20px;
+    font-size: 18px;
+}
+
+#restart {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery演習 - B1</title>
+    <link rel="stylesheet" href="b1.css">
+    <script src="jquery.min.js"></script>
+    <!-- <script src="yuki.js"></script> -->
+</head>
+
+<body>
+<h1>B1演習 冒険をつくろう</h1>
+<!-- 最初 -->
+<div class="quiz" id="step0">
+    <h2>名前を入力</h2>
+    <div class="question">
+        <p>冒険者の名前を入力してください。</p>
+        <form>
+            <input type="text" name="playerName" id="playerName">
+            <button type="button" class="answer-button" id="btn0">決定</button>
+        </form>
+    </div>
+    <div class="result">
+        冒険者 : <span id="player"></span> さん
+    </div>
+</div>
+
+<!-- 第1問 -->
+<div class="quiz" id="step1">
+    <h2>ステップ1. 草原</h2>
+    <div class="question">
+        <p>
+            <span class="name-area"></span>さんの前には草むらが広がっています。どちらを装備しますか？<br>「虫除けスプレー」か「草刈りマシン」か選んでください。
+        </p>
+        <form>
+            <div class="button-area">
+                <button type="button" class="answer-button step1btn" value="虫除けスプレー">虫除けスプレー</button>
+                <button type="button" class="answer-button step1btn" value="草刈りマシン">草刈りマシン</button>
+            </div>
+        </form>
+    </div>
+    <div class="answer">
+        「<span class="" id="a1"></span>」を選択しました。
+    </div>
+    <div class="result">
+        <p>虫に刺されずに進むことができました。</p>
+        <button type="button" class="answer-button" id="q1next">次へ</button>
+    </div>
+</div>
+
+<!-- 第2問 -->
+<div class="quiz" id="step2">
+    <h2>ステップ2. 砂漠</h2>
+    <div class="question">
+        <p>
+            進んでいると、砂漠が広がりました。どちらを装備しますか？<br>「砂漠用バギー」か「水筒」選んでください。
+        </p>
+        <form>
+            <div class="button-area">
+                <button type="button" class="answer-button step2btn" value="砂漠用バギー">砂漠用バギー</button>
+                <button type="button" class="answer-button step2btn" value="水筒">水筒</button>
+            </div>
+        </form>
+    </div>
+    <div class="answer">
+        「<span class="" id="a2"></span>」を選択しました。
+    </div>
+    <div class="result">
+        <p>喉が渇く前に砂漠を抜けることができました。</p>
+        <button type="button" class="answer-button" id="q2next">次へ</button>
+    </div>
+</div>
+
+<!-- 第3問 -->
+<div class="quiz" id="step3">
+    <h2>ステップ3. クリア</h2>
+    <div class="question">
+        <p id="step3-question">
+            おめでとうございます！無事クリアしました。
+        </p>
+    </div>
+</div>
+
+<!-- Game Over -->
+<div class="quiz" id="gameover">
+    <h2>GAME OVER</h2>
+    <p id="gameover-text"></p>
+</div>
+
+<!-- 最初から -->
+<div id="restart">
+    <button type="button" class="answer-button" id="restartBtn">最初から</button>
+</div>
+
+</body>
+<script src="b1.js"></script>
+
+</html>
