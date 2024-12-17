@@ -1,0 +1,39 @@
+/**
+ * ToDo, 背景色を自由に設定
+ */
+body {
+    padding-bottom: 200px;
+    background-color: lightgreen;
+}
+
+/* ページの見出し */
+/**
+ * ToDo, フォントサイズを自由に設定, 中央寄せ
+ */
+h1 {
+
+}
+
+
+/* クイズの設問, 1問あたりの全体 */
+/**
+ * ToDo, 背景色を白に設定, 外側の下に余白, 幅は600px, 上下左右に内側に余白
+ */
+div.quiz {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 第◯問(中見出し) */
+/**
+ * ToDo, フォントサイズを自由に設定, 色を自由に設定
+ */
+h2 {
+
+}
+
+
+#gameover {
+
+}

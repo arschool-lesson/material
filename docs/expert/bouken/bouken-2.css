@@ -1,3 +1,6 @@
+/**
+ * ToDo, 背景色を自由に設定
+ */
 body {
     padding-bottom: 200px;
     background-color: lightgreen;
@@ -35,23 +38,17 @@ h2 {
 }
 
 .result {
-    display: none;
+    /*display: none;*/
     font-weight: 700;
 }
 
 .answer {
-    display: none;
+    /*display: none;*/
     font-weight: 700;
 }
 
-span.name-area {
-    font-weight: 700;
-    color: blue;
-}
+#gameover {
 
-/* 回答するボタンを囲うエリア */
-.button-area {
-    text-align: center;
 }
 
 /* 回答するボタン */
@@ -62,30 +59,4 @@ span.name-area {
     border-radius: 6px;
     padding: 4px 20px;
     font-size: 18px;
-}
-
-#step1 {
-    display: none;
-}
-
-#step2 {
-    display: none;
-}
-
-#step3 {
-    display: none;
-}
-
-#step4 {
-    display: none;
-}
-
-#gameover {
-    display: none;
-}
-
-#restart {
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 100px;
 }
