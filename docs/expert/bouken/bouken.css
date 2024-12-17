@@ -40,10 +40,12 @@ h2 {
 }
 
 .result {
+    display: none;
     font-weight: 700;
 }
 
 .answer {
+    display: none;
     font-weight: 700;
 }
 
@@ -88,6 +90,26 @@ label {
     border-radius: 20px;
     padding: 4px 20px;
     font-size: 18px;
+}
+
+#step1 {
+    display: none;
+}
+
+#step2 {
+    display: none;
+}
+
+#step3 {
+    display: none;
+}
+
+#step4 {
+    display: none;
+}
+
+#gameover {
+    display: none;
 }
 
 #restart {

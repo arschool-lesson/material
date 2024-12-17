@@ -1,11 +1,5 @@
 
-$('#step1').hide()
-$('#step2').hide()
-$('#step3').hide()
-$('#step4').hide()
 
-$('.answer').hide()
-$('.result').hide()
 
 $('#gameover').hide()
 
@@ -17,7 +11,7 @@ $('#btn0').on('click', function(){
     player = $('#playerName').val()
     if(player === '') return ''
 
-    
+
     $('#player').text(player)
     $('#step0 .question').hide()
     $('#step0 .result').show()
@@ -33,7 +27,7 @@ $('.step1btn').on('click', function(){
     $('#step1 form').hide()
     $('#step1 .answer').show()
     $('#a1').text(answer)
-    
+
     if(answer === '虫除けスプレー') {
         $('#step1 .result').show()
     } else {
@@ -54,7 +48,7 @@ $('.step2btn').on('click', function(){
     $('#step2 form').hide()
     $('#step2 .answer').show()
     $('#a2').text(answer)
-    
+
     if(answer === '砂漠用バギー') {
         $('#step2 .result').show()
     } else {
