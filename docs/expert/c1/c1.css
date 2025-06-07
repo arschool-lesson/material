@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    background: #f8f8f8;
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+h2.name {
+    margin-top: 0;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #ccc;
+}
+.origin {
+    color: #2a3aff;
+}
+
+.types {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.description {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
