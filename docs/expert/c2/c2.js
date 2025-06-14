@@ -156,25 +156,22 @@ function updateCart() {
     $("#total").text(total);
 }
 
-// ページ読み込み時の処理
-$(document).ready(function() {
-    // 商品一覧を表示
-    displayProducts();
+// 商品一覧を表示
+displayProducts()
 
-    // カートに追加ボタンのイベント処理
-    $(document).on("click", ".add-cart", function() {
-        const id = parseInt($(this).attr("data-id"));
-        addCart(id);
-    });
+// カートに追加ボタンのイベント処理
+$(document).on("click", ".add-cart", function() {
+    const id = parseInt($(this).attr("data-id"))
+    addCart(id)
+})
 
-    // 削除ボタンのイベント処理
-    $(document).on("click", ".delete-item", function() {
-        const index = parseInt($(this).attr("data-index"));
-        removeFromCart(index);
-    });
+// 削除ボタンのイベント処理
+$(document).on("click", ".delete-item", function() {
+    const index = parseInt($(this).attr("data-index"))
+    removeFromCart(index)
+})
 
-    // 購入ボタンのイベント処理
-    $("#checkout").on('click', function() {
-        checkout();
-    });
-});
+// 購入ボタンのイベント処理
+$("#checkout").on('click', function() {
+    checkout()
+})
