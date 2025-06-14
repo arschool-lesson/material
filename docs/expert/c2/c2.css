@@ -125,27 +125,6 @@ p {
     text-align: right;
 }
 
-#checkout {
-    background: #2196F3;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 15px;
-    float: right;
-    transition: background 0.3s;
-}
-
-#checkout:hover {
-    background: #0b7dda;
-}
-
-.empty-cart {
-    text-align: center;
-    color: #777;
-    padding: 20px;
-}
 
 /* 削除ボタンのスタイル */
 .delete-item {
