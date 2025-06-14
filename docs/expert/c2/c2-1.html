@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ECサイト - 商品カート</title>
+    <link rel="stylesheet" href="c2.css">
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>商品一覧</h1>
+    <div id="shopping">
+        <div class="card">
+            <img src="img/onigiri.jpg">
+            <h3 class="name">おにぎり</h3>
+            <p class="price">140円</p>
+            <p class="stock">在庫: 8個</p>
+            <button data-id="1" class="add-cart">カートに追加</button>
+        </div>
+        <div class="card"><img src="img/sandwich.jpg">
+            <h3 class="name">サンドイッチ</h3>
+            <p class="price">250円</p>
+            <p class="stock">在庫: 6個</p>
+            <button data-id="2" class="add-cart">カートに追加</button>
+        </div>
+    </div>
+
+    <h1>ショッピングカート</h1>
+    <div id="cart">
+        <div id="cart-items">
+            <div class="cart-item">
+                <div class="item-name">おにぎり × 1</div>
+                <div class="item-price">140円</div>
+                <button class="delete-item" data-index="0">削除</button>
+            </div>
+            <div class="cart-item">
+                <div class="item-name">サンドイッチ × 1</div>
+                <div class="item-price">250円</div>
+                <button class="delete-item" data-index="1">削除</button>
+            </div>
+        </div>
+        <div id="cart-total">
+            <p>小計: <span id="subtotal">0</span>円</p>
+            <p>消費税(10%): <span id="tax">0</span>円</p>
+            <p>合計: <span id="total">0</span>円</p>
+        </div>
+    </div>
+</div>
+
+<script src="c2-1.js"></script>
+</body>
+</html>
