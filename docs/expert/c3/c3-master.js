@@ -42,39 +42,26 @@ let gameState = {
     boostTimer: null
 }
 
-/**
- * 再描画
- */
 function updateDisplay() {
     $("#mana").text(gameState.mana)
     $("#click-power").text(gameState.clickPower)
     $("#auto-mana").text(gameState.autoMana)
-
+    
     for (let i = 0; i < items.length; i++) {
         let item = items[i]
         let card = $('[data-id="' + item.id + '"]')
         let buyBtn = card.find('.buy-btn')
-
+        
         if (item.type === "boost") {
             card.find('.boost-time').text(item.remaining)
             if (item.remaining > 0) {
-                buyBtn.text('使用中')
-                buyBtn.attr('disabled', true)
+                buyBtn.prop('disabled', true).text('使用中')
             } else {
-                buyBtn.text('購入')
-                if(gameState.mana < item.price) {
-                    buyBtn.attr('disabled', true)
-                } else {
-                    buyBtn.attr('disabled', false)
-                }
+                buyBtn.prop('disabled', gameState.mana < item.price).text('購入')
             }
         } else {
             card.find('.owned-count').text(item.owned)
-            if(gameState.mana < item.price) {
-                buyBtn.attr('disabled', true)
-            } else {
-                buyBtn.attr('disabled', false)
-            }
+            buyBtn.prop('disabled', gameState.mana < item.price)
         }
     }
 }
@@ -93,17 +80,17 @@ function buyItem(itemId) {
             break
         }
     }
-
+    
     if (item == null || gameState.mana < item.price) {
         return
     }
-
+    
     if (item.type === "boost" && item.remaining > 0) {
         return
     }
-
+    
     gameState.mana -= item.price
-
+    
     if (item.type === "click") {
         gameState.clickPower += item.effect
         item.owned++
@@ -119,20 +106,20 @@ function buyItem(itemId) {
     } else if (item.type === "boost") {
         activateBoost(item)
     }
-
+    
     updateDisplay()
 }
 
 function activateBoost(item) {
     gameState.boostMultiplier = item.effect
     item.remaining = item.duration
-
+    
     $("#character-section").addClass("boost-active")
-
+    
     if (gameState.boostTimer) {
         clearInterval(gameState.boostTimer)
     }
-
+    
     gameState.boostTimer = setInterval(function() {
         item.remaining--
         if (item.remaining <= 0) {
@@ -145,10 +132,7 @@ function activateBoost(item) {
     }, 1000)
 }
 
-/**
- * 自動クリック処理
- */
-function autoClick() {
+function autoGenerate() {
     if (gameState.autoMana > 0) {
         gameState.mana += gameState.autoMana
         updateDisplay()
@@ -164,6 +148,6 @@ $(document).on("click", ".buy-btn", function() {
     buyItem(itemId)
 })
 
-setInterval(autoClick, 1000)
+setInterval(autoGenerate, 1000)
 
 updateDisplay()
