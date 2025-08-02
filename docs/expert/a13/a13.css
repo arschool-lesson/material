@@ -1,0 +1,50 @@
+body {
+    width: 750px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #444;
+    margin: 6px 0;
+}
+
+p {
+    margin: 0 0 6px;
+}
+
+table {
+    border-collapse: collapse;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+tr {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+th, td {
+    border-right: 1px solid #ccc;
+    padding: 4px 10px;
+    background: #fff;
+}
+th {
+    background: #fafafa;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+div.area h3, div.area p {
+    color: green;
+}
+
+div.time-tables {
+    display: flex;
+}
+
+div.time-tables table {
+    flex: 1 1 48%;
+    margin: 0 10px 30px;
+    font-size: 13px;
+}
