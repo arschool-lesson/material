@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>GASテスト</title>
+    <link rel="stylesheet" href="d1.css">
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<!-- #1 例題 -->
+<h1>スプレッドシート関連</h1>
+<div>
+    <h2>データ追加 </h2>
+    <p>スプレッドシートにデータを追加します。</p>
+    <p>現状、追加するデータは直接JavaScriptに書いてあります。</p>
+    <button type="button" id="add-button">追加</button>
+</div>
+<div>
+    <h2>データ取得(全部)</h2>
+    <p>スプレッドシートからデータを取得します。</p>
+    <p>全件を取得して、現状はconsoleにログ出力しています。</p>
+    <button type="button" id="get-all-button">取得</button>
+</div>
+<div>
+    <h2>データ取得(1件)</h2>
+    <p>スプレッドシートから指定した行のデータを取得します。</p>
+    <p>現状はconsoleにログ出力しています。</p>
+    <input type="number" id="rowId" name="rowId" value="1" min="1" style="width: 60px;">
+    <button type="button" id="get-row-button">取得</button>
+</div>
+</body>
+<script src="d1.js"></script>
+</html>
